@@ -1,0 +1,31 @@
+@InjectMocks
+    private PartidoServiceImpl partidoService;
+    @Mock
+    private PartidoRepository partidoRepository;
+    @Mock
+    private PartidoMapper partidoMapper;
+    private final ArrayList<Partido> partidos =new ArrayList<>();
+    @BeforeEach
+    void init(){
+        partidos.clear();
+        Partido partido1 = new Partido();
+        Partido partido2 = new Partido();
+        Partido partido3 = new Partido();
+        partidos.add(partido1);
+        partidos.add(partido2);
+        partidos.add(partido3);
+    }
+    @Test
+    void testListAllPartidosOK() {
+        //Mockeamos las precondiciones
+        when(partidoRepository.findAll()).thenReturn(partidos);
+        when(partidoMapper.toDTO(Mockito.any(Partido.class)))
+            .thenReturn(new PartidoDTO());
+        //Llamamos al metodo a testear
+        List<PartidoDTO> partidosDto = partidoService.listAll();
+        //Asserts!
+        assertEquals(partidos.size(), partidosDto.size());
+        verify(partidoRepository,Mockito.times(1)).findAll();
+        verify(partidoMapper,Mockito.times(partidos.size()))
+            .toDTO(Mockito.any(Partido.class));
+    }

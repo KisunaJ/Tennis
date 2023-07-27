@@ -1,0 +1,19 @@
+SELECT j.*, e.nombre AS Entrenador  FROM Jugador j
+LEFT JOIN Entrenador e ON j.identrenador = e.identrenador
+
+
+SELECT j.*, e.nombre AS Entrenador  FROM Jugador j
+INNER JOIN Entrenador e ON j.identrenador = e.identrenador
+
+SELECT j.*, e.nombre AS Entrenador  FROM Jugador j
+INNER JOIN Entrenador e ON j.identrenador = e.identrenador
+ORDER BY j.puntos DESC
+
+SELECT j.*, e.nombre AS Entrenador  FROM Jugador j
+INNER JOIN Entrenador e ON j.identrenador = e.identrenador
+ORDER BY e.nombre, j.puntos DESC
+
+SELECT e.nombre, SUM(j.puntos) AS Entrenador  FROM Jugador j
+INNER JOIN Entrenador e ON j.identrenador = e.identrenador
+GROUP BY e.nombre
+

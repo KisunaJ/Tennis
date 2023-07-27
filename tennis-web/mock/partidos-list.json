@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "fechaComienzo": "30/06/2021 16:00",
+      "estado": "NO_INICIADO",
+      "jugadorLocal": {
+        "id": 1,
+        "nombre": "Gonzalo",
+        "puntos": 1000
+      },
+      "jugadorVisitante": {
+        "id": 2,
+        "nombre": "Jenny",
+        "puntos": 100
+      }
+    },
+    {
+      "id": 2,
+      "fechaComienzo": "29/06/2021 16:00",
+      "estado": "NO_INICIADO",
+      "jugadorLocal": {
+        "id": 3,
+        "nombre": "Morita",
+        "puntos": 50
+      },
+      "jugadorVisitante": {
+        "id": 4,
+        "nombre": "Polar",
+        "puntos": 50
+      }
+    }
+  ]

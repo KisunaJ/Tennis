@@ -1,0 +1,14 @@
+  "nombre": "Morita",
+    "puntos": "1000"
+
+    "nombre": "Polar",
+    "puntos": "1200"
+
+    "nombre": "Gonzalo",
+    "puntos": "1500"
+
+    "nombre": "Jenny",
+    "puntos": "1800"
+
+    "nombre":"Estadio Moril",
+    "direccion": "Avenida Mores 234"
